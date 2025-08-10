@@ -1,0 +1,73 @@
+<!-- Мета-теги и SEO-оптимизация -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<!-- SEO Meta Tags -->
+<title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+<meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+<meta name="keywords" content="Python, Django, Backend, Developer, AWS, Docker, PostgreSQL, Redis, Blockchain, NFT, DevOps">
+<meta name="author" content="{{ site.author }}">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+<meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+<meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+<meta property="og:image" content="{{ site.url }}/assets/images/og-image.png">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="{{ site.url }}{{ page.url }}">
+<meta property="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+<meta property="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+<meta property="twitter:image" content="{{ site.url }}/assets/images/og-image.png">
+
+<!-- Canonical URL -->
+<link rel="canonical" href="{{ site.url }}{{ page.url }}">
+
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+
+<!-- Preconnect to external domains -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com">
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+<!-- DNS Prefetch -->
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+<link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "{{ site.author }}",
+  "jobTitle": "Python Developer",
+  "description": "{{ site.description }}",
+  "url": "{{ site.url }}",
+  "sameAs": [
+    "https://github.com/{{ site.github_username }}",
+    "https://t.me/{{ site.telegram_username }}"
+  ],
+  "knowsAbout": [
+    "Python", "Django", "AWS", "Docker", "PostgreSQL", "Redis", "Blockchain", "DevOps"
+  ],
+  "worksFor": {
+    "@type": "Organization",
+    "name": "CoreBlocks"
+  }
+}
+</script>
+
+<!-- Performance optimizations -->
+<meta name="theme-color" content="#00d4ff">
+<meta name="msapplication-TileColor" content="#00d4ff">
+<meta name="msapplication-config" content="/browserconfig.xml">

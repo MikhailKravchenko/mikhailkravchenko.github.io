@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://mikhailkravchenko.github.io/sitemap.xml
+
+# Disallow admin areas
+Disallow: /admin/
+Disallow: /_admin/
+
+# Allow important files
+Allow: /assets/
+Allow: /_includes/
+Allow: /_layouts/
+
+# Crawl delay
+Crawl-delay: 1

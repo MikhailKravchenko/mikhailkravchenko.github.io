@@ -1,3 +1,38 @@
-theme: jekyll-theme-midnight
-title: Mikhail's homepage
-description: Bookmark this to keep an eye on my project updates!
+theme: jekyll-theme-cayman
+title: Mikhail Kravchenko - Python Developer
+description: Full-stack Python developer specializing in backend systems, blockchain integration, and modern web technologies
+url: "https://mikhailkravchenko.github.io"
+baseurl: ""
+author: Mikhail Kravchenko
+email: pirog11@ya.ru
+github_username: MikhailKravchenko
+twitter_username: 
+linkedin_username: 
+telegram_username: pirog
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Collections
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"

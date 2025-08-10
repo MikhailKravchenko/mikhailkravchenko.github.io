@@ -1,0 +1,25 @@
+{
+    "name": "Mikhail Kravchenko - Python Developer",
+    "short_name": "MK Portfolio",
+    "description": "Full-stack Python developer specializing in backend systems, blockchain integration, and modern web technologies",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#0a0a0a",
+    "theme_color": "#00d4ff",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "categories": ["technology", "business", "productivity"],
+    "lang": "ru",
+    "dir": "ltr"
+}

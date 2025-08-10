@@ -1,0 +1,399 @@
+/* Дополнительные стили для максимально технологичного дизайна */
+
+/* Неоновые эффекты */
+.neon-glow {
+    text-shadow: 
+        0 0 5px var(--primary),
+        0 0 10px var(--primary),
+        0 0 15px var(--primary),
+        0 0 20px var(--primary);
+}
+
+.neon-border {
+    box-shadow: 
+        0 0 5px var(--primary),
+        0 0 10px var(--primary),
+        0 0 15px var(--primary),
+        inset 0 0 5px var(--primary);
+}
+
+/* Градиентные тексты */
+.gradient-text {
+    background: linear-gradient(45deg, var(--primary), var(--accent), var(--secondary));
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientShift 3s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Анимированные границы */
+.animated-border {
+    position: relative;
+    overflow: hidden;
+}
+
+.animated-border::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, var(--primary), transparent);
+    transition: left 0.5s ease;
+}
+
+.animated-border:hover::before {
+    left: 100%;
+}
+
+/* Пульсирующие элементы */
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Вращающиеся иконки */
+.rotate-icon {
+    transition: transform 0.3s ease;
+}
+
+.rotate-icon:hover {
+    transform: rotate(360deg);
+}
+
+/* Стеклянный эффект */
+.glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Анимированные фоны */
+.animated-bg {
+    background: linear-gradient(-45deg, var(--dark), var(--darker, var(--primary), var(--dark));
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Эффект печатающей машинки */
+.typewriter {
+    overflow: hidden;
+    border-right: 2px solid var(--primary);
+    white-space: nowrap;
+    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: var(--primary); }
+}
+
+/* Анимированные карточки */
+.card-3d {
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease;
+}
+
+.card-3d:hover {
+    transform: rotateY(10deg) rotateX(5deg);
+}
+
+/* Эффект волны */
+.wave-effect {
+    position: relative;
+    overflow: hidden;
+}
+
+.wave-effect::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(0, 212, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.wave-effect:hover::after {
+    width: 300px;
+    height: 300px;
+}
+
+/* Анимированные кнопки */
+.btn-animated {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.btn-animated::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.btn-animated:hover::before {
+    left: 100%;
+}
+
+/* Эффект магнитного притяжения */
+.magnetic {
+    transition: transform 0.3s ease;
+}
+
+.magnetic:hover {
+    transform: scale(1.1);
+}
+
+/* Анимированные иконки технологий */
+.tech-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+.tech-icon:hover {
+    transform: scale(1.2) rotate(10deg);
+    color: var(--accent);
+}
+
+/* Прогресс-бары для навыков */
+.skill-bar {
+    width: 100%;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+    margin: 1rem 0;
+}
+
+.skill-progress {
+    height: 100%;
+    background: var(--gradient);
+    border-radius: 4px;
+    transition: width 1s ease;
+    position: relative;
+}
+
+.skill-progress::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+/* Анимированные счетчики */
+.counter {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary);
+    text-align: center;
+}
+
+/* Эффект параллакса для секций */
+.parallax-section {
+    transform: translateZ(0);
+    will-change: transform;
+}
+
+/* Анимированные фоны для секций */
+.section-bg {
+    position: relative;
+    overflow: hidden;
+}
+
+.section-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 20% 80%, rgba(0, 212, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
+    z-index: -1;
+}
+
+/* Эффект появления элементов */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.fade-in-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Анимированные границы для карточек */
+.border-animation {
+    position: relative;
+}
+
+.border-animation::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid transparent;
+    border-radius: inherit;
+    background: linear-gradient(45deg, var(--primary), var(--accent), var(--secondary)) border-box;
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    animation: borderRotate 3s linear infinite;
+}
+
+@keyframes borderRotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Эффект свечения для активных элементов */
+.glow-active {
+    box-shadow: 
+        0 0 20px rgba(0, 212, 255, 0.3),
+        0 0 40px rgba(0, 212, 255, 0.2),
+        0 0 60px rgba(0, 212, 255, 0.1);
+}
+
+/* Анимированные подчеркивания */
+.underline-animation {
+    position: relative;
+}
+
+.underline-animation::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--gradient);
+    transition: width 0.3s ease;
+}
+
+.underline-animation:hover::after {
+    width: 100%;
+}
+
+/* Эффект размытия для модальных окон */
+.blur-background {
+    backdrop-filter: blur(10px);
+    background: rgba(10, 10, 10, 0.8);
+}
+
+/* Анимированные переходы между секциями */
+.section-transition {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.section-transition.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Эффект песка для фона */
+.sand-effect {
+    background-image: 
+        radial-gradient(circle at 25% 25%, rgba(0, 212, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 75% 75%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
+    background-size: 200px 200px;
+    animation: sandMove 20s linear infinite;
+}
+
+@keyframes sandMove {
+    0% { background-position: 0 0; }
+    100% { background-position: 200px 200px; }
+}
+
+/* Анимированные точки для списков */
+.animated-dots li {
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.animated-dots li::before {
+    content: '▶';
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+    animation: dotPulse 2s infinite;
+}
+
+@keyframes dotPulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.2); opacity: 0.7; }
+}
+
+/* Эффект неонового свечения для заголовков */
+.neon-title {
+    text-shadow: 
+        0 0 5px var(--primary),
+        0 0 10px var(--primary),
+        0 0 15px var(--primary),
+        0 0 20px var(--primary),
+        0 0 30px var(--primary);
+    animation: neonFlicker 1.5s infinite alternate;
+}
+
+@keyframes neonFlicker {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+        text-shadow: 
+            0 0 5px var(--primary),
+            0 0 10px var(--primary),
+            0 0 15px var(--primary),
+            0 0 20px var(--primary),
+            0 0 30px var(--primary);
+    }
+    20%, 24%, 55% {
+        text-shadow: none;
+    }
+}
