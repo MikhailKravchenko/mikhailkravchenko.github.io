@@ -355,6 +355,42 @@ layout: default
             line-height: 1.7;
         }
 
+        .education-meta {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .curriculum-list {
+            list-style: none;
+            margin: 1rem 0 0 0;
+            padding: 0;
+            border-top: 1px solid var(--border);
+            padding-top: 1rem;
+        }
+
+        .curriculum-list li {
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+            padding: 0.35rem 0;
+            color: var(--text);
+            font-size: 0.95rem;
+        }
+
+        .curriculum-list li span:last-child {
+            color: var(--primary);
+            font-weight: 500;
+            flex-shrink: 0;
+        }
+
+        .curriculum-total {
+            margin-top: 0.5rem;
+            padding-top: 0.5rem;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
         /* Projects */
         .projects-grid {
             display: grid;
@@ -827,13 +863,29 @@ layout: default
         <h2 class="section-title">Образование и курсы</h2>
         <div class="education-grid">
             <div class="education-item loading">
-                <h3 class="education-title">DevOps для эксплуатации и разработки</h3>
-                <p class="education-company">Яндекс.Практикум</p>
-                <p class="education-period">2025 – настоящее время</p>
+                <h3 class="education-title">DevOps для эксплуатации и разработки: расширенная версия</h3>
+                <p class="education-company">АНО ДПО «Образовательные технологии Яндекса» (Яндекс.Практикум)</p>
+                <p class="education-period">24.04.2025 — 13.01.2026</p>
+                <p class="education-meta">Диплом о профессиональной переподготовке. Квалификация: Программист. Объём программы: 406 ч. № 2026-12111-004</p>
                 <p class="education-description">
-                    Осваиваю полный стек DevOps: CI/CD, контейнеризация, мониторинг, автоматизация инфраструктуры.
-                    Работа с Docker, Kubernetes, Helm, Ansible, Jenkins, GitLab CI.
+                    Программа охватывает полный стек DevOps: CI/CD, контейнеризация, мониторинг, автоматизация инфраструктуры. Изученные дисциплины и объём часов:
                 </p>
+                <ul class="curriculum-list">
+                    <li><span>Основы Linux и работы с сетями</span><span>20 ч</span></li>
+                    <li><span>Создание скриптов на bash</span><span>25 ч</span></li>
+                    <li><span>Системы контроля версий и автоматизация сборки приложений</span><span>30 ч</span></li>
+                    <li><span>Гибкие методологии и Continuous Integration</span><span>30 ч</span></li>
+                    <li><span>Сети и основы работы на серверах Linux</span><span>30 ч</span></li>
+                    <li><span>Continuous Delivery и Continuous Deployment</span><span>30 ч</span></li>
+                    <li><span>Infrastructure as Code и системы управления конфигурацией</span><span>40 ч</span></li>
+                    <li><span>DBOps: реляционные и нереляционные базы данных</span><span>25 ч</span></li>
+                    <li><span>Docker-контейнеризация и хранение данных</span><span>32 ч</span></li>
+                    <li><span>Микросервисы, балансировка и кэширование</span><span>25 ч</span></li>
+                    <li><span>Kubernetes. Деплой и обеспечение надёжности приложения</span><span>60 ч</span></li>
+                    <li><span>Логирование и мониторинг ошибок</span><span>25 ч</span></li>
+                    <li><span>Дипломный проект</span><span>34 ч</span></li>
+                </ul>
+                <p class="curriculum-total">Всего: 406 часов</p>
             </div>
 
             <div class="education-item loading">
