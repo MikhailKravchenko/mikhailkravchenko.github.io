@@ -621,7 +621,7 @@ layout: default
             <p class="hero-subtitle">Меня зовут <strong>Михаил</strong></p>
             <p class="hero-description">
                 Опытный Python-разработчик с более чем 15-летним стажем в IT. Специализируюсь на создании высоконагруженных backend-систем,
-                DevOps-практиках и интеграции современных технологий. В настоящее время работаю в "Перекресток" и изучаю DevOps в Яндекс.Практикуме.
+                DevOps-практиках и интеграции современных технологий.
             </p>
             <div class="cta-buttons">
                 <a href="#contact" class="btn btn-primary">
